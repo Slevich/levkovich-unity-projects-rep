@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 8aa15a990323fe54ea3cd29b0ecf2966
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Black Brush
+  fontNames:
+  - Black Brush
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 174f39a1576c7f646b82e1d538ee4261, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
