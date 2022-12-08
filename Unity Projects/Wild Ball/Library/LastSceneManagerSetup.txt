@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/11.5. Wild Ball. Part 1_/Scenes/MainMenu.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
