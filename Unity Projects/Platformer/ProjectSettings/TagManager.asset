@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - FxTemporaire
+  - PushingObjects
+  - MovingObjects
+  - Damageable
+  - EnemyStopper
+  - Score
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Non Collided Objects
+  - Player
+  - PlayerCollidedObjects
+  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3706589869
+    locked: 0
+  - name: Foreground
+    uniqueID: 2093724975
+    locked: 0
+  - name: Ground
+    uniqueID: 2686810991
+    locked: 0
+  - name: Character
+    uniqueID: 2323700903
+    locked: 0
+  - name: Water
+    uniqueID: 2791784887
+    locked: 0
+  - name: UI
+    uniqueID: 194778963
+    locked: 0
