@@ -33,7 +33,7 @@ public class NextLevelDoor : MonoBehaviour
     {
         UpdateDoorHPLevel();
 
-        if (doorsHealth.isAlive == false)
+        if (doorsHealth.IsAlive == false)
         {
             GameObject explosion = Instantiate(destroyVFX, transform.position, Quaternion.identity);
             Destroy(gameObject);
@@ -46,7 +46,7 @@ public class NextLevelDoor : MonoBehaviour
     /// </summary>
     private void UpdateDoorHPLevel()
     {
-        float doorHP = doorsHealth.currentHealth / doorsHealth.maxHealth;
+        float doorHP = doorsHealth.GetCurrentHealthProcent();
         HPBar.fillAmount = doorHP;
     }
     #endregion

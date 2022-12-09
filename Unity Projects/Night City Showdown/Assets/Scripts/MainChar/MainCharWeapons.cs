@@ -159,7 +159,7 @@ public class MainCharWeapons : MonoBehaviour
 
         if (canAim)
         {
-            if (playerHealth.isAlive)
+            if (playerHealth.IsAlive)
             {
                 if (isWeaponEquipped)
                 {

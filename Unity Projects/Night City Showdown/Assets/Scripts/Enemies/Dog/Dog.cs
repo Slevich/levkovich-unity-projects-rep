@@ -348,9 +348,9 @@ public class Dog : MonoBehaviour
     /// </summary>
     private void UpdateHP()
     {
-        enemyHP = enemyHealth.currentHealth / enemyHealth.maxHealth;
+        enemyHP = enemyHealth.GetCurrentHealthProcent();
         HPBar.fillAmount = enemyHP;
-        isAlive = enemyHealth.isAlive;
+        isAlive = enemyHealth.IsAlive;
     }
 
     /// <summary>

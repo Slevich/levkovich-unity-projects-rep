@@ -138,9 +138,9 @@ public class BossCart : MonoBehaviour
     /// </summary>
     private void UpdateHPLevel()
     {
-        float enemyHP = enemyHealth.currentHealth / enemyHealth.maxHealth;
+        float enemyHP = enemyHealth.GetCurrentHealthProcent();
         HPBar.fillAmount = enemyHP / 2;
-        isAlive = enemyHealth.isAlive;
+        isAlive = enemyHealth.IsAlive;
     }
 
     /// <summary>

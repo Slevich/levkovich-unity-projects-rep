@@ -222,7 +222,7 @@ public class MainCharMovement : MonoBehaviour
     /// </summary>
     private void isAlive()
     {
-        if (playerHealth.isAlive == false)
+        if (playerHealth.IsAlive == false)
         {
             canMove = false;
         }

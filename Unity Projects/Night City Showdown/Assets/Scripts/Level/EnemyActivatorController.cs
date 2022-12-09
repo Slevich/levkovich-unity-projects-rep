@@ -62,7 +62,7 @@ public class EnemyActivatorController : MonoBehaviour
     /// </summary>
     private void CalculateCurrentProcent()
     {
-        currentBossHealthProcent = currentBossHealth.currentHealth / currentBossHealth.maxHealth;
+        currentBossHealthProcent = currentBossHealth.GetCurrentHealthProcent();
     }
 
     /// <summary>

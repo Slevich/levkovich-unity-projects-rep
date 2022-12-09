@@ -4,10 +4,12 @@ public class Health : MonoBehaviour
 {
     #region Переменные
     [Header("Current health's amount of character.")]
-    public float currentHealth;
+    [SerializeField] private float currentHealth;
     [Header("Maximal health's amount of character.")]
-    public float maxHealth;
-    public bool isAlive = true;
+    [SerializeField] private float maxHealth;
+
+    public bool IsAlive => currentHealth > 0;
+
     #endregion
 
     #region Методы
@@ -17,7 +19,6 @@ public class Health : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        isAlive = true;
         currentHealth = maxHealth;
     }
 
@@ -35,11 +36,25 @@ public class Health : MonoBehaviour
     }
 
     /// <summary>
-    /// В Update проверяем жив ли персонаж.
+    /// Метод прибавляет к текущему здоровью определенное значение.
+    /// Если при прибавлении текущее здоровье больше максимального - прибавляется их разница.
+    /// Если нет, прибавляется указанное в параметре значение.
     /// </summary>
-    private void Update()
+    /// <param name="healAmount"></param>
+    public void ToHeal(float healAmount)
     {
-        CheckIsAlive();
+        if ((currentHealth + healAmount) > maxHealth) currentHealth += (maxHealth - currentHealth);
+        else currentHealth += healAmount;
+    }
+
+    /// <summary>
+    /// Метод вычисляет текущий процент здоровья.
+    /// </summary>
+    /// <returns></returns>
+    public float GetCurrentHealthProcent()
+    {
+        float healthProcent = currentHealth / maxHealth;
+        return healthProcent;
     }
 
     /// <summary>
@@ -50,23 +65,6 @@ public class Health : MonoBehaviour
     public void ToDamage(float damage)
     {
         currentHealth -= damage;
-    }
-
-    /// <summary>
-    /// Метод проверяет, исходя из того
-    /// меньше ли или равно ли нулю текущее здоровье.
-    /// Если да - персонаж мертв.
-    /// </summary>
-    private void CheckIsAlive()
-    {
-        if (currentHealth <= 0)
-        {
-            isAlive = false;
-        }
-        else
-        {
-            isAlive = true;
-        }
     }
     #endregion
 }

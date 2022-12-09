@@ -174,7 +174,7 @@ public class MainCharUICounts : MonoBehaviour
     /// </summary>
     private void UpdateHealthLevel()
     {
-        playerHealthProgressBar.fillAmount = playerHealth.currentHealth / playerHealth.maxHealth;
+        playerHealthProgressBar.fillAmount = playerHealth.GetCurrentHealthProcent();
     }
 
     /// <summary>
@@ -237,7 +237,7 @@ public class MainCharUICounts : MonoBehaviour
     /// </summary>
     private void ShowDeathScreen()
     {
-        if (playerHealth.isAlive == false)
+        if (playerHealth.IsAlive == false)
         {
             levelHUD.SetActive(false);
             deathScreen.SetActive(true);

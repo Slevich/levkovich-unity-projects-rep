@@ -143,7 +143,7 @@ public class Boss : MonoBehaviour
     /// </summary>
     private void UpdateHPLevel()
     {
-        float enemyHP = enemyHealth.currentHealth / enemyHealth.maxHealth;
+        float enemyHP = enemyHealth.GetCurrentHealthProcent();
         HPBar.fillAmount = enemyHP;
     }
 
@@ -242,7 +242,7 @@ public class Boss : MonoBehaviour
     /// </summary>
     private void NextStage()
     {
-        if (enemyHealth.currentHealth <= (enemyHealth.maxHealth / 2))
+        if (enemyHealth.GetCurrentHealthProcent() <= 0.5f)
         {
             nextStageTimeline.Play();
         }

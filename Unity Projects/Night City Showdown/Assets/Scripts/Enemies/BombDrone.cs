@@ -249,9 +249,9 @@ public class BombDrone : MonoBehaviour
     /// </summary>
     private void UpdateEnemiesHealth()
     {
-        enemyHP = enemyHealth.currentHealth / enemyHealth.maxHealth;
+        enemyHP = enemyHealth.GetCurrentHealthProcent();
         HPBar.fillAmount = enemyHP;
-        isAlive = enemyHealth.isAlive;
+        isAlive = enemyHealth.IsAlive;
     }
     #endregion
 }

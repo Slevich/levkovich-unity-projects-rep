@@ -60,12 +60,12 @@ public class MainCharAnimations : MonoBehaviour
         {
             playerAnim.SetFloat("Speed", playerInput.horizontalDirection);
         }
-        else if (playerInput.horizontalDirection > 0 && playerHealth.isAlive)
+        else if (playerInput.horizontalDirection > 0 && playerHealth.IsAlive)
         {
             playerSR.flipX = false;
             playerAnim.SetFloat("Speed", playerInput.horizontalDirection);
         }
-        else if (playerInput.horizontalDirection < 0 && playerHealth.isAlive)
+        else if (playerInput.horizontalDirection < 0 && playerHealth.IsAlive)
         {
             playerSR.flipX = true;
             playerAnim.SetFloat("Speed", Mathf.Abs(playerInput.horizontalDirection));
@@ -188,7 +188,7 @@ public class MainCharAnimations : MonoBehaviour
     /// </summary>
     private void UpdateDeathAnimation()
     {
-        if (playerHealth.isAlive == false)
+        if (playerHealth.IsAlive == false)
         {
             playerAnim.SetBool("IsDead", true);
         }
