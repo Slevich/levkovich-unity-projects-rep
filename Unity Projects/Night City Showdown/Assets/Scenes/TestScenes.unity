@@ -5292,11 +5292,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1726248929599530772, guid: a5a03e25b008d654ab51da8390d4c770,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1726248929599530783, guid: a5a03e25b008d654ab51da8390d4c770,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 1726248929862516358, guid: a5a03e25b008d654ab51da8390d4c770,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1726248929862516359, guid: a5a03e25b008d654ab51da8390d4c770,
         type: 3}
       propertyPath: playerTransform
@@ -5312,15 +5322,25 @@ PrefabInstance:
       propertyPath: voidRayDistance
       value: 0.55
       objectReference: {fileID: 0}
+    - target: {fileID: 1726248929862516359, guid: a5a03e25b008d654ab51da8390d4c770,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726248929862516359, guid: a5a03e25b008d654ab51da8390d4c770,
+        type: 3}
+      propertyPath: enemyFindingTrigger
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1726248929862516379, guid: a5a03e25b008d654ab51da8390d4c770,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.65
+      value: 2.667
       objectReference: {fileID: 0}
     - target: {fileID: 1726248929862516379, guid: a5a03e25b008d654ab51da8390d4c770,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.63
+      value: 0.639
       objectReference: {fileID: 0}
     - target: {fileID: 1726248929862516379, guid: a5a03e25b008d654ab51da8390d4c770,
         type: 3}
@@ -5380,10 +5400,78 @@ PrefabInstance:
     - target: {fileID: 1726248929862516382, guid: a5a03e25b008d654ab51da8390d4c770,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1726248929209955253, guid: a5a03e25b008d654ab51da8390d4c770, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a5a03e25b008d654ab51da8390d4c770, type: 3}
+--- !u!1 &1726248929482831992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1726248929862516382, guid: a5a03e25b008d654ab51da8390d4c770,
+    type: 3}
+  m_PrefabInstance: {fileID: 1726248929482831991}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1726248929482831993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1726248929209955254, guid: a5a03e25b008d654ab51da8390d4c770,
+    type: 3}
+  m_PrefabInstance: {fileID: 1726248929482831991}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1726248929482831994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726248929482831992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2aacad53361bd7438d080fac5aa76c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minWaitBorder: 1
+  maxWaitBorder: 2
+  speed: 1
+  enemyStopDistance: 0.05
+  enemyFindingTrigger: {fileID: 1726248929482831995}
+  playerTransform: {fileID: 1393796850}
+--- !u!58 &1726248929482831995
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726248929482831993}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
+--- !u!114 &1726248929482831996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726248929482831992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caba69272b588eb43873587bcc017f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundRayDistance: 0.1
+  sidesRayDistance: 0.2
+  voidRayDistance: 0.7
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 256
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!1001 &2360806799440950522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5908,7 +5996,7 @@ PrefabInstance:
     - target: {fileID: 5827344890069984390, guid: 2a7e61aae1950b64489b3df6aa0d0033,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5827344890069984441, guid: 2a7e61aae1950b64489b3df6aa0d0033,
         type: 3}

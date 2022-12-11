@@ -4,19 +4,10 @@ using UnityEngine;
 
 public class PlayerDetection : MonoBehaviour
 {
-    #region Переменные
-    //Переменная, содержащая имя родительского объекта.
-    private string parentName;
-    #endregion
-
     #region Методы
     /// <summary>
     /// На старте получаем имя родительского объекта.
     /// </summary>
-    private void Start()
-    {
-        parentName = GetComponentInParent<Rigidbody2D>().gameObject.name;
-    }
 
     /// <summary>
     /// При вхождении игрока в триггер, в компоненте родительского объекта,
@@ -27,26 +18,7 @@ public class PlayerDetection : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (parentName.Contains("Biker"))
-            {
-                GetComponentInParent<Biker>().playerDetected = true;
-            }
-            else if (parentName.Contains("Dog"))
-            {
-                GetComponentInParent<Dog>().playerDetected = true;
-            }
-            else if (parentName.Contains("BombDrone"))
-            {
-                GetComponentInParent<BombDrone>().playerDetected = true;
-            }
-            else if (parentName.Contains("Cyborg"))
-            {
-                GetComponentInParent<Cyborg>().playerDetected = true;
-            }
-            else if (parentName.Contains("Raider"))
-            {
-                GetComponentInParent<Raider>().playerDetected = true;
-            }
+            GetComponentInParent<EnemyMovement>().PlayerDetected = true;
         }
     }
 
@@ -59,26 +31,7 @@ public class PlayerDetection : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (parentName.Contains("Biker"))
-            {
-                GetComponentInParent<Biker>().playerDetected = false;
-            }
-            else if (parentName.Contains("Dog"))
-            {
-                GetComponentInParent<Dog>().playerDetected = false;
-            }
-            else if (parentName.Contains("BombDrone"))
-            {
-                GetComponentInParent<BombDrone>().playerDetected = false;
-            }
-            else if (parentName.Contains("Cyborg"))
-            {
-                GetComponentInParent<Cyborg>().playerDetected = false;
-            }
-            else if (parentName.Contains("Raider"))
-            {
-                GetComponentInParent<Raider>().playerDetected = false;
-            }
+            GetComponentInParent<EnemyMovement>().PlayerDetected = false;
         }
     }
     #endregion

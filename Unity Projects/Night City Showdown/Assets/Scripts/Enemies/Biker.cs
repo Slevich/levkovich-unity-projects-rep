@@ -24,7 +24,6 @@ public class Biker : MonoBehaviour
     [Header("Points, which player earned for killing enemy.")]
     [SerializeField] private int pointsCost;
     [Header("Layers masks.")]
-    [SerializeField] private LayerMask playerMask;
     [SerializeField] private LayerMask groundMask;
     [SerializeField] private LayerMask enemyMask;
     [Header("Game object prefab, which contains animation of death VFX.")]

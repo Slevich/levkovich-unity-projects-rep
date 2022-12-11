@@ -26,35 +26,9 @@ public class EnemyCheck : MonoBehaviour
     /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Ground"))
         {
-            if (parentName.Contains("Biker"))
-            {
-                GetComponentInParent<Biker>().playerInRange = true;
-            }
-            else if (parentName.Contains("Dog"))
-            {
-                GetComponentInParent<Dog>().playerInRange = true;
-            }
-            else if (parentName.Contains("BombDrone"))
-            {
-                GetComponentInParent<BombDrone>().enemyReachPlayer = true;
-            }
-        }
-        else if (collision.CompareTag("Ground"))
-        {
-            if (parentName.Contains("Biker"))
-            {
-                GetComponentInParent<Biker>().wallDetected = true;
-            }
-            else if (parentName.Contains("Dog"))
-            {
-                GetComponentInParent<Dog>().wallDetected = true;
-            }
-            else if (parentName.Contains("BombDrone"))
-            {
-                GetComponentInParent<BombDrone>().groundDetected = true;
-            }
+            GetComponentInParent<EnemyMovement>().WallDetected = true;
         }
     }
 
@@ -66,35 +40,9 @@ public class EnemyCheck : MonoBehaviour
     /// <param name="collision"></param>
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Ground"))
         {
-            if (parentName.Contains("Biker"))
-            {
-                GetComponentInParent<Biker>().playerInRange = false;
-            }
-            else if (parentName.Contains("Dog"))
-            {
-                GetComponentInParent<Dog>().playerInRange = false;
-            }
-            else if (parentName.Contains("BombDrone"))
-            {
-                GetComponentInParent<BombDrone>().enemyReachPlayer = false;
-            }
-        }
-        else if (collision.CompareTag("Ground"))
-        {
-            if (parentName.Contains("Biker"))
-            {
-                GetComponentInParent<Biker>().wallDetected = false;
-            }
-            else if (parentName.Contains("Dog"))
-            {
-                GetComponentInParent<Dog>().wallDetected = false;
-            }
-            else if (parentName.Contains("BombDrone"))
-            {
-                GetComponentInParent<BombDrone>().groundDetected = false;
-            }
+            GetComponentInParent<EnemyMovement>().WallDetected = false;
         }
     }
     #endregion
