@@ -51,8 +51,6 @@ namespace Project.Inputs
         /// </summary>
         private void Update()
         {
-            Debug.Log(inputIsActive);
-
             if (inputIsActive)
             {
                 horizontalDirection = Input.GetAxis(GlobalStringVars.HORIZONTAL_AXIS);

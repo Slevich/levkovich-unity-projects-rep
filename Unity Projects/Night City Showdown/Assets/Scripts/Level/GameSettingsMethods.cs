@@ -14,7 +14,6 @@ namespace Project.GameSettings
         {
             PlayerPrefs.SetFloat("MusicSliderPosition", GlobalSettings.musicSliderPosition);
             PlayerPrefs.SetFloat("SoundsSliderPosition", GlobalSettings.soundsSliderPosition);
-            Debug.Log("SettingsSaved");
             PlayerPrefs.Save();
         }
 
@@ -29,7 +28,6 @@ namespace Project.GameSettings
             {
                 GlobalSettings.musicSliderPosition = PlayerPrefs.GetFloat("MusicSliderPosition");
                 GlobalSettings.soundsSliderPosition = PlayerPrefs.GetFloat("SoundsSliderPosition");
-                Debug.Log("SettingsLoaded");
             }
             else
             {

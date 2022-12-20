@@ -19,6 +19,8 @@ public class PlayerDetection : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             GetComponentInParent<EnemyMovement>().PlayerDetected = true;
+            GetComponentInParent<EnemyMovement>().IsMoving = true;
+            GetComponentInParent<EnemyAttack>().PlayerGameObject = collision.gameObject;
         }
     }
 
@@ -32,6 +34,8 @@ public class PlayerDetection : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             GetComponentInParent<EnemyMovement>().PlayerDetected = false;
+            GetComponentInParent<EnemyMovement>().IsMoving = false;
+            GetComponentInParent<EnemyAttack>().PlayerGameObject = null;
         }
     }
     #endregion

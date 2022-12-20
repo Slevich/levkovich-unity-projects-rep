@@ -42,12 +42,6 @@ public class EnemyChecks : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log($"Is Falling: {isFalling}");
-        Debug.Log($"Is Enemy Forward: {isEnemyForward}");
-        Debug.Log($"Is enemy backward: {isEnemyBackward}");
-        Debug.Log($"Is ground forward: {isGroundForward}");
-        Debug.Log($"Is ground backward: {isGroundBackward}");
-
         GroundCheck();
 
         if (enemyMovement.IsMoving)
